@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirage - Creative Design Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Importing Open Sans font from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('popup-menu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+    
+      function toggleMenu() {
+  const menu = document.getElementById('popup-menu');
+  menu.classList.toggle('show');
+}
+
+// Close menu if clicked outside or add delay if clicking a menu link
+window.addEventListener('click', function (e) {
+  const menu = document.getElementById('popup-menu');
+  const icon = document.querySelector('.menu-icon');
+
+  // Check if the click is outside the menu and icon
+  if (!menu.contains(e.target) && !icon.contains(e.target)) {
+    menu.classList.remove('show');
+  }
+});
+
+// Close the menu after clicking a link with a short delay
+document.querySelectorAll('.popup-link').forEach(link => {
+  link.addEventListener('click', function () {
+    setTimeout(() => {
+      const menu = document.getElementById('popup-menu');
+      menu.classList.remove('show');
+    }, 300); // Adjust delay time as needed (300ms here)
+  });
+});
+    </script>
+  </head>
+  <body>
+    <header>
+
+        <div class="header-container">
+          <img
+            src="/elements/logos/nav-logo.png"
+            alt="Mirage Logo"
+            class="logo"
+          />
+          <nav class="nav-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div id="popup-menu" class="popup-menu">
+              <a href="#landing-page" class="popup-link">Home</a>
+              <a href="#photo-gallery" class="popup-link">Photo Gallery</a>
+              <a href="#contact" class="popup-link">Contact Us</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="landing-page">
+        <div class="image-container">
+          <img src="/elements/pictures/colors.png" alt="Creative Design" />
+        </div>
+        <div class="text-container">
+          <h1>Creative design, with purpose</h1>
+          <p>Logo design<br />Branding, Corporate Identity</p>
+          <p class="studio-description">A boutique digital studio</p>
+          <button class="cta-button" onclick="sendWhatsAppMessage()">
+            Let's work together
+          </button>
+
+          <script>
+            function sendWhatsAppMessage() {
+              const phoneNumber = "+27609409267"; // Replace with your phone number
+              const message = "Hello Mirage Studio, I'd like to work together!";
+              const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                message
+              )}`;
+              window.open(url, "_blank");
+            }
+          </script>
+        </div>
+      </section>
+    </main>
+    <section class="photo-gallery">
+      <div class="photo-container">
+        <!-- 12 divs for photos -->
+        <div class="photo">
+          <img src="elements/our-work/9.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/4.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/8.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/5.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/7.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/6.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/1.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/example-1.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/example-1.png" alt="" />
+        </div>
+       <!--<div class="photo">
+          <img src="elements/our-work/example-1.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/example-1.png" alt="" />
+        </div>
+        <div class="photo">
+          <img src="elements/our-work/example-1.png" alt="" />
+        </div> -->
+      </div>
+    </section>
+    <section class="contact-page">
+      <div class="contact-container">
+        <div class="contact-image">
+          <img src="elements/pictures/me_wh.png" alt="Joshua Muller" />
+        </div>
+        <div class="contact-info">
+          <h1>Joshua Muller</h1>
+          <p class="contact-writeup">
+            I understand the challenges and aspirations of running a small business, because I'm in the same boat. At Mirage Design Studio, my passion for design and helping others drives me to create tailored solutions that address the unique needs of your business.
+          </p>
+          <p class="contact-writeup">
+            I know what it's like to pour your heart and soul into a venture, and I'm here to support you every step of the way. My goal is to help you bring your ideas to life and grow your business with innovative design that truly resonates with your audience.
+          </p>
+          <p class="contact-writeup">
+            Let's work together to turn your dreams into reality and achieve the success you deserve.
+          </p>
+          <div class="contact-details">
+            <p>📞 Phone: <a href="tel:+27609409267">060 940 9267</a></p>
+            <p>📧 Email: <a href="mailto:joshua@mirages.co.za">joshua@mirages.co.za</a></p>
+            <p>🔗 LinkedIn: <a href="http://linkedin.com/company/mirage-za" target="_blank">Mirage ZA</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <p>© 2024 Mirage Studio | Designed by Joshua Muller</p>
+        <div class="footer-links">
+          <a href="mailto:joshua@mirages.co.za">Email</a>
+          <a href="http://linkedin.com/company/mirage-za" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

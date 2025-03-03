@@ -1,0 +1,306 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  color: #e0f1ff;
+  background-color: #1f2a44;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b2d3d1;
+  height: 100px;
+  padding: 0 50px;
+}
+
+.logo {
+  height: 80px;
+}
+
+/* Menu icon styling */
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon div {
+  width: 35px;
+  height: 4px;
+  background-color: #1f2a44;
+}
+
+/* Pop-up menu styling */
+.popup-menu {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 100px; /* Adjust based on header height */
+  right: 50px; /* Adjust based on your layout */
+  background-color: #b2d3d1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-menu.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-link {
+  display: block;
+  color: #1f2a44;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.popup-link:hover {
+  color: #e0f1ff;
+}
+
+/* Landing Page Section */
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  gap: 50px;
+  background-color: #1f2a44;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 550px;
+  height: auto; /* Ensures the aspect ratio is maintained */
+  display: block;
+  margin: 0 auto; /* Centers the image */
+}
+
+.text-container {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text-container h1 {
+  font-size: 4vw;
+  color: #9cc5d9;
+}
+
+.text-container p {
+  margin-top: 20px;
+  font-size: 2vw;
+  color: #b2d3d1;
+}
+
+.studio-description {
+  margin-top: 20px;
+  font-size: 1.5vw;
+  color: #9cc5d9;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #b2d3d1;
+  color: #1f2a44;
+  border: none;
+  cursor: pointer;
+}
+
+/* Photo Gallery Section */
+.photo-gallery {
+  padding: 2rem 0;
+  background-color: #b2d3d1;
+}
+
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  gap: 1rem;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 50px; /* Matching landing page margins */
+}
+
+.photo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contact Page */
+.contact-page {
+  background-color: #1f2a44;
+  color: #add6d8;
+  padding: 50px;
+  text-align: left;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.contact-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 12%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+  max-width: 600px;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-writeup {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.contact-details a {
+  color: #add6d8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2a44;
+  color: #add6d8;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #add6d8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .header-container {
+    padding: 0 20px;
+  }
+
+  .landing-page {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-container img {
+    max-width: 400px;
+  }
+
+  .text-container h1 {
+    font-size: 6vw;
+  }
+
+  .text-container p {
+    font-size: 3vw;
+  }
+
+  .studio-description {
+    font-size: 2vw;
+  }
+
+  .cta-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  .text-container {
+    max-width: 400px;
+  }
+
+  .photo-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 columns for vertical screens */
+    padding: 0 47px; /* Adjusted margins for phones */
+  }
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-image img {
+    width: 180px;
+  }
+
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+
+  .contact-writeup {
+    font-size: 1rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
